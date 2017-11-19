@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c53d66dd-cd0d-4376-a986-c56f751db301" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/alex.iml" afterPath="$PROJECT_DIR$/.idea/modules/alex.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/alex_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/alex_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/alex_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/alex_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-    </list>
+    <list default="true" id="c53d66dd-cd0d-4376-a986-c56f751db301" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -845,7 +838,7 @@
       <workItem from="1510952718939" duration="4803000" />
       <workItem from="1511019367728" duration="19305000" />
       <workItem from="1511106598502" duration="613000" />
-      <workItem from="1511112940929" duration="2421000" />
+      <workItem from="1511112940929" duration="2446000" />
     </task>
     <servers />
   </component>
@@ -865,14 +858,14 @@
     <history-entry file="All_in_alex_test - 2017.11.19 at 20h 23m 28s.xml">
       <configuration name="All in alex_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_alex_test - 2017.11.19 at 20h 53m 37s.xml">
+      <configuration name="All in alex_test" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ApiTest - 2017.11.19 at 19h 47m 45s.xml">
       <configuration name="ApiTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ApiTest - 2017.11.19 at 19h 48m 02s.xml">
       <configuration name="ApiTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApiTest_getMostCommitedTest - 2017.11.19 at 19h 44m 26s.xml">
-      <configuration name="ApiTest.getMostCommitedTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ApiTest_getMostStarredTest - 2017.11.19 at 19h 50m 00s.xml">
       <configuration name="ApiTest.getMostStarredTest" configurationId="JUnit" />
@@ -882,7 +875,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27142000" />
+    <option name="totallyTimeSpent" value="27167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -905,7 +898,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
