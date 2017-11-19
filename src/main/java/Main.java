@@ -14,9 +14,9 @@ public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
         GitApi api = new GitApi();
         ArrayList<Repo> reps = api.getMostStarredRepos();
-        String r = reps.toString();
-        api.getMostCommitsAndContributors(reps,"2017-10-17","2017-10-20");
 
+        api.getMostCommitsAndContributors(reps,"2017-10-17","2017-10-20");
+        int r = reps.get(0).getCommitsNum();
 
     }
 }

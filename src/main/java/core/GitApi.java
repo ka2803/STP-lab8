@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
 import java.util.*;
 
 public class GitApi {
-    private final String GIT_TOKEN = "ffd1501d40fc9e843a5e516c70f6168d7a9397e8";
+    private final String GIT_TOKEN = "!57ba53bf2c5a4e2a25becef3bbe7aab9acff7ad4";
 
     public ArrayList<Repo> getMostStarredRepos() throws URISyntaxException, IOException {
         URI uri = new URIBuilder()
@@ -24,7 +24,7 @@ public class GitApi {
                 .setParameter("page","1")
                 .setParameter("per_page","10")
                 .build();
-        String jsonString = HttpTransferer.getHttpStringResponse(uri,GIT_TOKEN);
+        String jsonString = HttpTransferer.getHttpStringResponse(uri,getToken());
         return GitParser.parseRepos(jsonString);
 
     }
@@ -45,7 +45,7 @@ public class GitApi {
                 .setParameter("page", String.valueOf(page))
                 .setParameter("per_page", "100")
                 .build();
-            String response = HttpTransferer.getHttpStringResponse(uri,GIT_TOKEN);
+            String response = HttpTransferer.getHttpStringResponse(uri,getToken());
             ArrayList<Repo> tmpRes = GitParser.parseRepos(response);
             if(tmpRes.size()==0){
                 break;
@@ -71,9 +71,9 @@ public class GitApi {
         repos.sort(new Comparator<Repo>() {
             @Override
             public int compare(Repo o1, Repo o2) {
-                if(o1.getCommitsNum()>o2.getCommitsNum())
+                if(o1.getStars()>o2.getStars())
                     return 1;
-                else if(o1.getCommitsNum()==o2.getCommitsNum())
+                else if(o1.getStars()==o2.getStars())
                     return 0;
                 else
                     return -1;
@@ -81,7 +81,7 @@ public class GitApi {
         });
 
     }
-    public void commitNums(Repo repa,String startDate,String endDate) throws URISyntaxException, IOException {
+    private void commitNums(Repo repa,String startDate,String endDate) throws URISyntaxException, IOException {
         int page=1;
         Hashtable<String,Integer> commits = new Hashtable<>();
         while(true){
@@ -94,7 +94,7 @@ public class GitApi {
                     .setParameter("page", String.valueOf(page))
                     .setParameter("per_page", "50")
                     .build();
-            String response = HttpTransferer.getHttpStringResponse(uri,GIT_TOKEN);
+            String response = HttpTransferer.getHttpStringResponse(uri,getToken());
 
             if(!GitParser.commitsParse(response,commits))
                 break;
@@ -111,7 +111,7 @@ public class GitApi {
         }
         return count;
     }
-    public ArrayList<Contributor> getContributors(Hashtable<String,Integer> commits){
+    private ArrayList<Contributor> getContributors(Hashtable<String,Integer> commits){
         ArrayList<Contributor> result = new ArrayList<>();
         for (Map.Entry<String,Integer> entry:
                 commits.entrySet()
@@ -139,5 +139,8 @@ public class GitApi {
             result= new ArrayList<Contributor>(result.subList(0,5));
 
         return result;
+    }
+    public String getToken(){
+        return GIT_TOKEN.substring(1);
     }
 }

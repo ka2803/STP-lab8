@@ -22,4 +22,9 @@ public class Contributor {
     public void setCommitNum(int commitNum) {
         this.commitNum = commitNum;
     }
+
+    @Override
+    public String toString() {
+        return login;
+    }
 }

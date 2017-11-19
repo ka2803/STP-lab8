@@ -16,10 +16,11 @@ import java.util.Hashtable;
 
 public class ParserTest {
     private  Repo repa;
-
+    private  GitApi api;
     @Before
     public void init(){
         repa = new Repo();
+        api =new GitApi();
         repa.setName("freeCodeCamp/freeCodeCamp");
     }
     @Test
@@ -35,7 +36,7 @@ public class ParserTest {
                 .setParameter("page","1")
                 .setParameter("per_page","10")
                 .build();
-        String GIT_TOKEN = "ffd1501d40fc9e843a5e516c70f6168d7a9397e8";
+        String GIT_TOKEN = api.getToken();
         String jsonString = HttpTransferer.getHttpStringResponse(uri,GIT_TOKEN);
         ArrayList<Repo> reposTest = GitParser.parseRepos(jsonString);
         Assert.assertEquals("[freeCodeCamp/freeCodeCamp, twbs/bootstrap, EbookFoundation/free-programming-books, facebook/react, tensorflow/tensorflow, vuejs/vue, sindresorhus/awesome, getify/You-Dont-Know-JS, d3/d3, robbyrussell/oh-my-zsh]",reposTest.toString());
@@ -50,7 +51,7 @@ public class ParserTest {
                 .setParameter("page", String.valueOf(1))
                 .setParameter("per_page", "10")
                 .build();
-        String GIT_TOKEN = "ffd1501d40fc9e843a5e516c70f6168d7a9397e8";
+        String GIT_TOKEN = api.getToken();
         String jsonString = HttpTransferer.getHttpStringResponse(uri,GIT_TOKEN);
         boolean res = GitParser.commitsParse(jsonString,new Hashtable<>());
         Assert.assertEquals(true,res);
